@@ -47,7 +47,6 @@ pipeline {
                 echo "Password: ${params.PASSWORD}"  
             }
         }
-    }
         stage('Approval') {
             input {
                 message "Should we continue?"
@@ -61,6 +60,8 @@ pipeline {
                 echo "Hello, ${PERSON}, nice to meet you."
             }
         }
+    }
+        
 
     post {
         always {
