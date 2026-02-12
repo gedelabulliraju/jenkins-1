@@ -34,8 +34,8 @@ pipeline {
         }
 
         stage('Deploy') {
-            when {
-                branch 'main' // Only deploy when on the main branch
+            when { 
+                expression { env.GIT_BRANCH == 'origin/main' } // Only deploy if the branch is 'main'
             }
             steps {
                 echo 'Deploying...'
