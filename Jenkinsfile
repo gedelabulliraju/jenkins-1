@@ -34,6 +34,9 @@ pipeline {
         }
 
         stage('Deploy') {
+            when {
+                branch 'main' // Only deploy when on the main branch
+            }
             steps {
                 echo 'Deploying...'
             }
