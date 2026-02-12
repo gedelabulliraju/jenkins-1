@@ -22,6 +22,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
+                echo 'this is building'
                 sh 'sleep 10' // Simulate a build step that takes some time
             }
         }
