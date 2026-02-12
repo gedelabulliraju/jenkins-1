@@ -35,7 +35,7 @@ pipeline {
 
         stage('Deploy') {
             when {
-                expression { return env.BRANCH_NAME == 'main' } // Only deploy when on the main branch
+                branch 'main' // Only deploy when on the main branch
             }
             steps {
                 echo 'Deploying...'
